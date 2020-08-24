@@ -1,0 +1,43 @@
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Meus Dados</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <form class="" [formGroup]="form" (ngSubmit)="alterar(form.value)">
+      <ion-item lines="full">
+        <ion-label position="floating">Nome</ion-label>
+        <ion-input type="text" required formControlName="nome"></ion-input>
+      </ion-item>
+
+       
+      <ion-item lines="full">
+        <ion-label position="floating">Telefone</ion-label>
+        <ion-input type="text" required formControlName="telefone"></ion-input>
+      </ion-item>
+       <h3>Endereços</h3>
+      <ion-list no-lines>
+        <ion-item *ngFor="let end of enderecos">
+          {{end.addr_name}}<br>
+          {{end.addr_street}}
+          <ion-button color="danger" (click)="excluirEndereco(end.addr_id)">Excluir</ion-button> 
+       <!-- {{end.Nome}}
+          <button> 
+              <span style="text-transform: capitalize;">Excluir</span> 
+               (click)="excluirEndereco(end.id)" 
+          </button>   -->
+        </ion-item>
+      </ion-list>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="button" color="success" expand="block" (click)="abrirModalEndereco()">Cadastrar Endereço</ion-button>
+        </ion-col>
+      </ion-row>
+
+    </form>
+  </ion-content>

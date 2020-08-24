@@ -1,0 +1,36 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>Cadastrar Endereço</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Fechar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-row>
+    <ion-col>
+      <ion-button color="primary" (click)="getLocation()">Pegar Localização Atual</ion-button>
+    </ion-col>
+  </ion-row>
+  <form class="" [formGroup]="form" (ngSubmit)="cadastrarEndereco(form.value)">
+    <ion-item lines="full">
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input type="text" required formControlName="nome"></ion-input>
+    </ion-item>
+
+
+    <ion-item lines="full">
+      <ion-label position="floating">CEP</ion-label>
+      <ion-input type="text" required formControlName="cep"></ion-input>
+    </ion-item>
+
+
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="success" expand="block">Cadastrar</ion-button>
+      </ion-col>
+    </ion-row>
+
+  </form>
+</ion-content>

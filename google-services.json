@@ -1,0 +1,84 @@
+{
+  "project_info": {
+    "project_number": "21830923303",
+    "firebase_url": "https://hora-do-lixo-patrickerson.firebaseio.com",
+    "project_id": "hora-do-lixo-patrickerson",
+    "storage_bucket": "hora-do-lixo-patrickerson.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21830923303:android:4d6c3e032ef60dd77c0a02",
+        "android_client_info": {
+          "package_name": "com.horadolixo.app.horadolixo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21830923303-fgdlgbdu85g9ti7guhl7pm799793grj7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAavchQRNtskOiT1ihJIfY4umgTRoxdUrA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "21830923303-fgdlgbdu85g9ti7guhl7pm799793grj7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "21830923303-k0c8fghjqut7co9ohid4emeevt71usep.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "horadolixo.app"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-8221813418921251~7357611078"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21830923303:android:107088202ccde4247c0a02",
+        "android_client_info": {
+          "package_name": "com.patrickerson.e_coleta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21830923303-fgdlgbdu85g9ti7guhl7pm799793grj7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAavchQRNtskOiT1ihJIfY4umgTRoxdUrA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "21830923303-fgdlgbdu85g9ti7guhl7pm799793grj7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "21830923303-k0c8fghjqut7co9ohid4emeevt71usep.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "horadolixo.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

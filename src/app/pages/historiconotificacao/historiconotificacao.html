@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Notificações</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list no-lines>
+   
+    <ion-item *ngFor="let not of notificacoes">
+      {{not.push_title}}
+        <br>
+      {{not.push_message}}
+      <ion-button color="danger" (click)="excluir(not.push_id)">Excluir</ion-button> 
+    </ion-item>
+  </ion-list>
+</ion-content>

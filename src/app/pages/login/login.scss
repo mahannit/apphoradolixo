@@ -1,0 +1,94 @@
+.app-title {
+    
+    background-color: #4cb050;
+    text-align: center;
+    border-style: hidden;
+    
+
+}
+
+.app-submit {
+    background-color: #8bc53f;
+    text-align: center;
+
+}
+
+.app-content {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color: #eee;;
+}
+ion-item {
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 20px !important;
+    padding-left: 5px !important;
+    font-size: 0.9em;
+   
+    border: 1px solid #888888;
+    box-shadow: 2px 5px #888888;
+
+    --highlight-color-valid: transparent;
+    --highlight-color-invalid: transparent;
+    --highlight-color-focused: transparent;
+}
+
+ion-button {
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 20px !important;
+    --background: #4cb050;
+}
+ion-col.link-forgot {
+    text-align: center;
+    text-decoration: none;
+}
+ion-col.col-benvindo {
+    font-weight: bold ;
+    text-shadow: lightslategrey;
+}
+ion-col {
+    text-align: center;
+}
+fa-icon {
+    color: #4cb050;
+}
+ion-label {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none; 
+    text-decoration-style: none; 
+    text-decoration-color: none;
+    display: block;
+    margin: 16px;
+    font-weight: bold;
+    color: #00b33b;
+}
+a.under {
+    color: #333;
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-color: currentcolor;
+}
+a.over {
+    text-decoration: overline;
+    text-decoration-style: dotted;
+    text-decoration-color: #00b33b;
+
+}
+a.line {
+    color: #00b33b;
+    text-decoration: line-through;
+    text-decoration-style: dashed;
+    text-decoration-color: red;
+}
+
+a:active {
+    color: #00b33b;
+    font-size: 110%;
+}

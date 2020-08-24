@@ -1,0 +1,26 @@
+export class Usuario {
+    app_id;
+    user_bio;
+    user_cell;
+    user_cnpj;
+    user_cpf;
+    user_email;
+    user_facebook;
+    user_id;
+    user_ig;
+    user_lastname;
+    user_lastupdate;
+    user_level;
+    user_login;
+    user_logo;
+    user_name;
+    user_newpass;
+    user_password;
+    user_registration;
+    user_stats;
+    user_telephone;
+    user_thumb;
+    user_twitter;
+    user_type;
+    token;
+}

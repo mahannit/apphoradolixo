@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+    </ion-buttons>
+    <ion-title class="app-title"><img alt="logo" width=65% src="assets/imgs/icon_02.png" > </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="app-content">
+  <ion-row>
+    <ion-col>&nbsp;</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="col-benvindo">Olá, seja bem vindo!</ion-col>
+  </ion-row>
+  
+  <ion-row>
+    <ion-col>Já possui o seu cadastro?</ion-col>
+  </ion-row>
+  
+  <form class="app-form" [formGroup]="form" (ngSubmit)="login(form.value)">
+    <ion-item>
+      <ion-label position="floating">&nbsp;Email</ion-label>
+      <ion-input type="text" required formControlName="login"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">&nbsp;Senha</ion-label>
+      <ion-input type="password" required formControlName="password"></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        &nbsp;
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="link-forgot">
+        <ion-button type="submit" class="app-submit" expand="block">Entrar</ion-button>
+        <a (click)="abrirEsqueceuSenha()" class="small-text">Esqueceu sua senha?</a>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="link">
+        Ainda não possui seu cadastro?<br>
+        <a [routerLink]="['/cadastro']" class="small-text">Crie sua conta agora!</a>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

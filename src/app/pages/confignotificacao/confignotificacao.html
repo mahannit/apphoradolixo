@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Configurações</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-content fullscreen>
+    <form class="" [formGroup]="form" (ngSubmit)="alterar(form.value)">
+        <ion-list>
+            <ion-item>
+                <ion-label>Receber notificações?</ion-label>
+                <ion-checkbox formControlName="receber" slot="start"></ion-checkbox>
+            </ion-item>
+            <ion-item>
+                <ion-checkbox  formControlName="seg" slot="start"></ion-checkbox>
+                <ion-label>Segunda</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-checkbox formControlName="ter" slot="start"></ion-checkbox>
+                <ion-label>Terça</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-checkbox formControlName="qua" slot="start"></ion-checkbox>
+                <ion-label>Quarta</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-checkbox formControlName="qui" slot="start"></ion-checkbox>
+                <ion-label>Quinta</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-checkbox formControlName="sex" slot="start"></ion-checkbox>
+                <ion-label>Sexta</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-checkbox formControlName="sab" slot="start"></ion-checkbox>
+                <ion-label>Sabado</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-checkbox formControlName="dom" slot="start"></ion-checkbox>
+                <ion-label>Domingo</ion-label>
+            </ion-item>
+        </ion-list>
+        <ion-row>
+            <ion-col>
+              <ion-button type="submit" color="success" expand="block">Confirmar</ion-button>
+            </ion-col>
+          </ion-row>
+    </form>
+</ion-content>

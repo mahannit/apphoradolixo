@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-row>
+      <ion-col>Olá, <font color="#4cb050"><b>{{this.usuario.user_name}}</b></font><br>
+             <font size="4"><b>Acompanhe os caminhões</b></font>
+    </ion-col>    
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div #map id="map"></div>
+</ion-content>

@@ -8,16 +8,47 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { LoginPage } from './pages/login/login';
+import { CadastroPage } from './pages/cadastro/cadastro';
+import { MeusDadosPage } from './pages/meusdados/meusdados';
+import { EnderecoModal } from './modals/endereco/endereco';
+import { HistoricoNotificacaoPage } from './pages/historiconotificacao/historiconotificacao';
+import { HistoricoPage } from './pages/historico/historico';
+import { ConfigNotificacaoPage } from './pages/confignotificacao/confignotificacao';
+import { EcotresPage } from './pages/ecotres/ecotres';
+import { SuportePage } from './pages/suporte/suporte';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { FirebaseX } from "@ionic-native/firebase-x/ngx";
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { EsqueceuSenhaModal } from './modals/esqueceusenha/esqueceusenha';
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    LoginPage,
+    CadastroPage,
+    MeusDadosPage,
+    EnderecoModal,
+    EsqueceuSenhaModal,
+    HistoricoNotificacaoPage,
+    HistoricoPage,
+    ConfigNotificacaoPage,
+    EcotresPage,
+    SuportePage,
+    AppComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     IonicModule.forRoot(),
     AppRoutingModule
   ],
   providers: [
+    Geolocation,
+    FirebaseX,
+    InAppBrowser,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

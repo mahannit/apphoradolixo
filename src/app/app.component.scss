@@ -117,3 +117,11 @@ ion-note {
 ion-item.selected {
   --color: var(--ion-color-primary);
 }
+
+ion-toolbar.footer {
+  --background: #4cb050;
+  text-align: center;
+}
+ion-button {
+  --background: #4cb050;
+  }

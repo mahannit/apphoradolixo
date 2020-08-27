@@ -17,11 +17,12 @@ export class HomePage implements OnInit {
 
   caminhoes = [];
   icon = {
-    path: "M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0z", //SVG path of awesomefont marker
+  //  path: "M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0z", //SVG path of awesomefont marker
+    path: "M624 352h-16V243.9c0-12.7-5.1-24.9-14.1-33.9L494 110.1c-9-9-21.2-14.1-33.9-14.1H416V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h16c0 53 43 96 96 96s96-43 96-96h128c0 53 43 96 96 96s96-43 96-96h48c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zM160 464c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm320 0c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm80-208H416V144h44.1l99.9 99.9V256z",
     fillColor: 'green', //color of the marker
     fillOpacity: 1,
     strokeWeight: 0,
-    scale: 0.09, //size of the marker, careful! this scale also affects anchor and labelOrigin
+    scale: 0.05, //size of the marker, careful! this scale also affects anchor and labelOrigin
     anchor: new google.maps.Point(200, 510), //position of the icon, careful! this is affected by scale
     labelOrigin: new google.maps.Point(205, 190) //position of the label, careful! this is affected by scale
   };
@@ -117,29 +118,32 @@ export class HomePage implements OnInit {
 
 
 
-
+    
                       let m = new google.maps.Marker({
                         position: location,
                         map: this.map,
                         title: position.deviceId.toString(),
                         icon: this.icon,
-                       // icon: { url: './assets/imgs/caminhao1.png', rotation: 0 },
-                      //  label: {
-                      //   //fontFamily: "'Font Awesome 5 Free'",
-                      //   text: '\uf0d1', //icon code
-                      //   fontWeight: '900', //careful! some icons in FA5 only exist for specific font weights
-                      //   color: '#FFFFFF', //color of the text inside marker
-                      // }
+                        
+                        // icon: { url: './assets/imgs/caminhao1.png', rotation: 0 },
+                       
+                        // label: {
+                        //   fontFamily: "'Font Awesome 5 Free'",
+                        //   text: '\uf0d1', //icon code
+                        //  //text: 'Oi',
+                        //   fontWeight: '900', //careful! some icons in FA5 only exist for specific font weights
+                        //   color: '#FFFFFF', //color of the text inside marker
+                        // }
                       });
                       this.markers[position.deviceId] = m;
                     } else {
-                     // console.log("atualizou");
-                     // let locationAntiga = new google.maps.LatLng(marker.position.lat(), marker.position.lng());
+                      // console.log("atualizou");
+                      // let locationAntiga = new google.maps.LatLng(marker.position.lat(), marker.position.lng());
 
                       marker.setPosition(location);
-                   //  marker.setRotation(10,10);
+                      //  marker.setRotation(10,10);
                       //this.getBearingBetweenTwoPoints1(locationAntiga, location)
-                    //  console.log(this.getBearingBetweenTwoPoints1(locationAntiga, location));
+                      //  console.log(this.getBearingBetweenTwoPoints1(locationAntiga, location));
 
 
 
@@ -192,7 +196,7 @@ export class HomePage implements OnInit {
     return radians * 180.0 / Math.PI;
   }
 
-  listarEnderecoUsuario(){
+  listarEnderecoUsuario() {
     this.usuarioService.ListarEndereco(this.usuario.user_id).subscribe(data => {
       for (let index = 0; index < data.length; index++) {
         const element = data[index];
@@ -204,7 +208,7 @@ export class HomePage implements OnInit {
           icon: { url: './assets/imgs/green-dot.png', rotation: 0 }
         });
       }
-  });
+    });
   }
 
 

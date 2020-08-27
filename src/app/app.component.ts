@@ -116,7 +116,8 @@ export class AppComponent implements OnInit {
   }
   sair() {
     this.auth.logout();
-    this.routerComponent.navigate(['/login']);
+    navigator['app'].exitApp();
+    //this.routerComponent.navigate(['/login']);
   }
 
   inializeFCM() {

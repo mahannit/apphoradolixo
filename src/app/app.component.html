@@ -6,7 +6,13 @@
           <ion-list-header>e-coleta | Ecotres</ion-list-header>
           <ion-note>{{this.usuario.user_email}}</ion-note>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
+
+            <ion-item *ngIf="!(p.title == 'Suporte')" (click)="selectedIndex = i" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
+              <ion-icon color="success" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-label>{{ p.title }}</ion-label>
+              <!-- routerDirection="root" -->
+            </ion-item>
+            <ion-item *ngIf="(p.title == 'Suporte')" href="https://api.whatsapp.com/send?phone=553193567988" lines="none" detail="false" [class.selected]="selectedIndex == i">
               <ion-icon color="success" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>

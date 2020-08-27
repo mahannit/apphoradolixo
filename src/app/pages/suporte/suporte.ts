@@ -18,8 +18,8 @@ export class SuportePage implements OnInit {
 
 
     ngOnInit(): void {
-        const browser = this.iab.create('whatsapp//send?phone=553193567988');
-        this.routerComponent.navigate(['/home']);
+       // const browser = this.iab.create('whatsapp//send?phone=553193567988');
+       // this.routerComponent.navigate(['/home']);
     }
 
     abrirWhats(){

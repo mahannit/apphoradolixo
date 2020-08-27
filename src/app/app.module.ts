@@ -23,6 +23,15 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { FirebaseX } from "@ionic-native/firebase-x/ngx";
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { EsqueceuSenhaModal } from './modals/esqueceusenha/esqueceusenha';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+import { fas } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fas);
+
+
 @NgModule({
   declarations: [
     LoginPage,
@@ -41,6 +50,7 @@ import { EsqueceuSenhaModal } from './modals/esqueceusenha/esqueceusenha';
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    FontAwesomeModule,
     ReactiveFormsModule,
     IonicModule.forRoot(),
     AppRoutingModule
